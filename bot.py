@@ -60,4 +60,9 @@ async def luamod(ctx: commands.Context):
     else:
         await ctx.channel.send("No lua files found in message.")
 
+@bot.command()
+async def response(ctx: commands.Context):
+    await ctx.channel.send("Simple response")
+
+
 bot.run(TOKEN,log_handler=handler)
