@@ -83,18 +83,20 @@ async def on_ready():
 async def emuhelp(ctx: commands.Context):
     """Help text for emulator rando"""
     response_text = ''' Hello! For PCSX2-EX, make sure it is 
-    >>> - starting LuaEngine and loading scripts correctly. 
-    - your ISO is clean
-    - Run through openkh, check Show Console then about halfway down your looking for blue text `Initializing Lua Engine`. 
-    - below that you should see it load your scripts and at the bottom you see `GSDx Lookup CRC: F266B00B` '''
+    >>> 
+- starting LuaEngine and loading scripts correctly. 
+- your ISO is clean
+- Run through openkh, check Show Console then about halfway down your looking for blue text `Initializing Lua Engine`. 
+- below that you should see it load your scripts and at the bottom you see `GSDx Lookup CRC: F266B00B` '''
     await ctx.channel.send(response_text)
 
 @bot.command()
 async def pchelp(ctx: commands.Context):
     """Help text for pc rando"""
     response_text = '''Hello! To help with debugging, please post 
-    >>>- a screenshot of your KH install folder (the folder containing all the exe files, default folder is C:\Program Files (x86)\Epic Games)\n
-    - a screenshot of your OpenKH Mod Manager (the program that you have installed the GoA Mod and your zip seed to)'''
+    >>> 
+- a screenshot of your KH install folder (the folder containing all the exe files, default folder is C:\Program Files (x86)\Epic Games)\n
+- a screenshot of your OpenKH Mod Manager (the program that you have installed the GoA Mod and your zip seed to)'''
     await ctx.channel.send(response_text)
 
 @bot.command()
