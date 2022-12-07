@@ -102,14 +102,14 @@ async def seedgen(ctx: commands.Context):
     """Link to the seed generator"""
     embed = discord.Embed()
     embed.description = "[Seed Generator](https://github.com/tommadness/KH2Randomizer/releases/latest/download/Kingdom.Hearts.II.Final.Mix.Randomizer.zip)"
-    await ctx.channel.send(embed)
+    await ctx.channel.send(embed=embed)
 
 @bot.command()
 async def tracker(ctx: commands.Context):
     """Link to the tracker"""
     embed = discord.Embed()
     embed.description = "[KH2Tracker](https://github.com/Dee-Ayy/KH2Tracker/releases/latest/download/KhTracker.exe)"
-    await ctx.channel.send(embed)
+    await ctx.channel.send(embed=embed)
 
 @bot.command()
 async def luamod(ctx: commands.Context):
