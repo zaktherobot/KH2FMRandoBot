@@ -183,6 +183,25 @@ async def reminder(ctx: commands.Context, title, *, message):
         await ctx.channel.send("Invalid time format")
     except OverflowError:
         await ctx.channel.send("Too far into the future...")
+        
+@bot.command()
+async def time(ctx: commands.Context, title, *, message):
+    """Convert a relative time to time zone specific time. 
+         (e.g. !time 3 hours, will post the time 3 hours from now.)
+         can use weeks, days, hours, minutes"""
+    try:
+        weeks = get_time_element(message,"weeks")
+        days = get_time_element(message,"days")
+        hours = get_time_element(message,"hours")
+        minutes = get_time_element(message,"minutes")
+        new_date_object = datetime.today() + timedelta(weeks=weeks,days=days,hours=hours,minutes=minutes)
+        message_channel = bot.get_channel(ctx.message.channel.id)
+        await message_channel.send(convert_to_discord_time(new_date_object))
+
+    except ValueError:
+        await ctx.channel.send("Invalid time format")
+    except OverflowError:
+        await ctx.channel.send("Too far into the future...")
 
 if os.path.exists("reminders.json"):
     # initialize reminders saved from earlier
