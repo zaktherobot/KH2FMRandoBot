@@ -185,9 +185,9 @@ async def reminder(ctx: commands.Context, title, *, message):
         await ctx.channel.send("Too far into the future...")
         
 @bot.command()
-async def time(ctx: commands.Context, title, *, message):
+async def convert(ctx: commands.Context, title, *, message):
     """Convert a relative time to time zone specific time. 
-         (e.g. !time 3 hours, will post the time 3 hours from now.)
+         (e.g. !convert 3 hours, will post the time 3 hours from now.)
          can use weeks, days, hours, minutes"""
     try:
         weeks = get_time_element(message,"weeks")
