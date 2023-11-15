@@ -82,12 +82,8 @@ async def on_ready():
 @bot.command()
 async def emuhelp(ctx: commands.Context):
     """Help text for emulator rando"""
-    response_text = ''' Hello! For PCSX2-EX, make sure it is 
-    >>> 
-- starting LuaEngine and loading scripts correctly. 
-- your ISO is clean
-- Run through openkh, check Show Console then about halfway down your looking for blue text `Initializing Lua Engine`. 
-- below that you should see it load your scripts and at the bottom you see `GSDx Lookup CRC: F266B00B` '''
+    response_text = ''' Check this post about how to enable the PCSX2 Log: https://discord.com/channels/712837252279173150/721205500556869642/1020748985369116732
+Then under the "Log" tab -> save the log file, upload it here, and one of our members will check it for you'''
     await ctx.channel.send(response_text)
 
 @bot.command()
