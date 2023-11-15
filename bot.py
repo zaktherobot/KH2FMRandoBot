@@ -206,7 +206,7 @@ if os.path.exists("reminders.json"):
         new_reminder_json = {"events":[]}
 
         # clean up any reminders that don't need to happen
-        for reminder_data in reminder["events"]:
+        for reminder_data in reminder_json["events"]:
             event_time = parser.parse(reminder_data["event_time"])
             if event_time > datetime.today(): # event in the future
                 add_reminders(reminder_data["event_title"],event_time,reminder_data["event_channel"])
