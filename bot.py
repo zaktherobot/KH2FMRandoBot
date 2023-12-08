@@ -92,7 +92,8 @@ async def pchelp(ctx: commands.Context):
     response_text = '''Hello! To help with debugging, please post 
     >>> 
 - a screenshot of your KH install folder (the folder containing all the exe files, default folder is C:\Program Files (x86)\Epic Games)\n
-- a screenshot of your OpenKH Mod Manager (the program that you have installed the GoA Mod and your zip seed to)'''
+- a screenshot of your OpenKH Mod Manager (the program that you have installed the GoA Mod and your zip seed to)\n
+- if the game can start, on the KH2 title screen, press F2, then screenshot the console that appears'''
     await ctx.channel.send(response_text)
 
 @bot.command()
