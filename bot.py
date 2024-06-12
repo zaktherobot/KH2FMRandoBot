@@ -100,8 +100,13 @@ async def pchelp(ctx: commands.Context):
 async def seedgen(ctx: commands.Context):
     """Link to the seed generator"""
     embed = discord.Embed()
-    embed.description = "[Seed Generator](https://github.com/tommadness/KH2Randomizer/releases/latest/download/Kingdom.Hearts.II.Final.Mix.Randomizer.zip)"
+    embed.description = "[Seed Generator](https://github.com/tommadness/KH2Randomizer/releases/latest/download/KH2.Randomizer.exe)"
     await ctx.channel.send(embed=embed)
+
+@bot.command()
+async def steam(ctx: commands.Context):
+    response_text = "Not yet..."
+    await ctx.channel.send(response_text)
 
 @bot.command()
 async def tracker(ctx: commands.Context):
