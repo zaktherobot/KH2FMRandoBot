@@ -105,7 +105,7 @@ async def seedgen(ctx: commands.Context):
 
 @bot.command()
 async def steam(ctx: commands.Context):
-    response_text = "Not yet..."
+    response_text = "Yes..."
     await ctx.channel.send(response_text)
 
 @bot.command()
