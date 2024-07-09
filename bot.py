@@ -104,6 +104,11 @@ async def seedgen(ctx: commands.Context):
     await ctx.channel.send(embed=embed)
 
 @bot.command()
+async def steam(ctx: commands.Context):
+    response_text = "Yes..."
+    await ctx.channel.send(response_text)
+
+@bot.command()
 async def tracker(ctx: commands.Context):
     """Link to the tracker"""
     embed = discord.Embed()
