@@ -91,16 +91,16 @@ async def pchelp(ctx: commands.Context):
     """Help text for pc rando"""
     response_text = '''Hello! To help with debugging, please post 
     >>> 
-- a screenshot of your KH install folder (the folder containing all the exe files, default folder is C:\Program Files (x86)\Epic Games)\n
-- a screenshot of your OpenKH Mod Manager (the program that you have installed the GoA Mod and your zip seed to)\n
-- if the game can start, on the KH2 title screen, press F2, then screenshot the console that appears'''
+- a screenshot of your KH1.5+2.5 install folder (the folder containing all the exe files)\n
+- a screenshot of your OpenKH Mods Manager window (make sure all enabled mods are visible)\n
+- if the game can start, on the KH2 title screen, press F2, then screenshot the LuaBackend console (if it doesn't appear then let us know)'''
     await ctx.channel.send(response_text)
 
 @bot.command()
 async def seedgen(ctx: commands.Context):
     """Link to the seed generator"""
     embed = discord.Embed()
-    embed.description = "[Seed Generator](https://github.com/tommadness/KH2Randomizer/releases/latest/download/Kingdom.Hearts.II.Final.Mix.Randomizer.zip)"
+    embed.description = "[Seed Generator](https://github.com/tommadness/KH2Randomizer/releases/latest/download/KH2.Randomizer.exe)"
     await ctx.channel.send(embed=embed)
 
 @bot.command()
