@@ -63,7 +63,7 @@ handler = logging.FileHandler(filename='rando_bot.log', encoding='utf-8', mode='
 intents = discord.Intents.default()
 intents.typing = False
 intents.presences = False
-intents.message_content = True
+intents.message_content = False
 
 bot = commands.Bot(command_prefix='!', description="Commands used for supporting KH2FM Rando", intents=intents)
 
